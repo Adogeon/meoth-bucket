@@ -5,9 +5,12 @@ app = Flask(__name__)
 
 # Connect to the database
 conn = psycopg2.connect(
-    database="flask_db", user="flask", password="123456", host="localhost", port="5432"
+    database="flask_db",
+    user="flask",
+    password="123456",
+    host="localhost",
+    port="5432",
 )
-
 # create a cursor
 cur = conn.cursor()
 
