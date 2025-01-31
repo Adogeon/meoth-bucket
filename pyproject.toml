@@ -1,0 +1,11 @@
+[project]
+name = 'flaskr'
+version = '0.1.0'
+description = 'A simple budget app build with Flask."
+dependencies = [
+  "flask",
+]
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"

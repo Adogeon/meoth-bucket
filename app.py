@@ -75,7 +75,8 @@ def create():
     price = request.form["price"]
 
     # Insert the data into the table
-    cur.execute("""INSERT INTO products(name, price) VALUES (%s, %s)""", (name, price))
+    cur.execute(
+        """INSERT INTO products(name, price) VALUES (%s, %s)""", (name, price))
 
     # commit the changes
     conn.commit()
@@ -105,7 +106,8 @@ def update():
 
     # Update the data in the table
     cur.execute(
-        """UPDATE products SET name=%s,price=%s WHERE id=%s""", (name, price, id)
+        """UPDATE products SET name=%s,price=%s WHERE id=%s""", (
+            name, price, id)
     )
 
     # commit the changes
@@ -140,5 +142,5 @@ def delete():
     return redirect(url_for("index"))
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#   app.run(debug=True)
